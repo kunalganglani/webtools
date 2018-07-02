@@ -1,10 +1,10 @@
 {
-  "name": "angular-interview",
+  "name": "webtools",
   "version": "0.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kunalganglani/angularComp.git"
+    "url": "https://github.com/kunalganglani/webtools"
   },
   "homepage": "https://kunalganglani.github.io/angularComp",
   "scripts": {

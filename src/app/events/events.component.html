@@ -1,3 +1,37 @@
 <p>
-  events works!
+  Encode and Decode Base 64 string
 </p>
+<mat-tab-group  (selectedTabChange)="onTabClick($event)">
+  <mat-tab label="Encode Base 64">
+    <header>
+
+      <h1>Base64 Drag and Drop</h1>
+      <h2>Drag and drop files in Firefox and Chrome to convert them to base64 strings.</h2>
+
+    </header>
+    <p>If dropping images, right click on the thumbnail for the data URI.</p>
+    <div id="drop_zone">
+      <noscript>JavaScript must be enabled to use the drop zone.</noscript>
+    </div>
+    <output id="list"></output>
+    <h3>Features (or, "What makes this so cool?")</h3>
+    <ul>
+      <li>encodes any file into a base64 string</li>
+      <li>easy drag and drop of files on your computer into the drop zone</li>
+      <li>works offline; files aren't uploaded anywhere, so your sensitive data is safe</li>
+      <li>for Firefox, no server needed, just open index.html from your file manager</li>
+      <li>very portable; entire tool is contained in one file (index.html)</li>
+      <li>previews images as data URIs, for easy copying into CSS</li>
+    </ul>
+    <h3>Requirements</h3>
+    <ul>
+      <li>Mozilla Firefox 3.6+ or Google Chrome 6+ (maybe Opera 11.1+ and IE10+ also?)</li>
+      <li>JavaScript
+        <strong>ENABLED</strong> (that's where the magic happens)</li>
+    </ul>
+  </mat-tab>
+  <mat-tab label="Decode Base 64">
+    <div id="imageContainer"></div>
+  </mat-tab>
+
+</mat-tab-group>
