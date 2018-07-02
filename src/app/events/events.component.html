@@ -31,6 +31,10 @@
     </ul>
   </mat-tab>
   <mat-tab label="Decode Base 64">
+    <mat-form-field class="example-full-width">
+      <textarea #base64Input matInput placeholder="Enter base 64 string to be converted to image"></textarea>
+    </mat-form-field>
+    <button mat-button (click)="decodeString(base64Input.value)">Decode to Image</button>
     <div id="imageContainer"></div>
   </mat-tab>
 
