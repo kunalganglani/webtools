@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EventsComponent } from './events.component';
+import { Base64WebToolComponent } from './base64-web-tool.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
 
 const routes: Routes = [
-  { path: '', component: EventsComponent},
+  { path: '', component: Base64WebToolComponent},
   {path: '**', redirectTo: ''}
 ];
 
@@ -15,6 +15,6 @@ const routes: Routes = [
     MaterialModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [EventsComponent]
+  declarations: [Base64WebToolComponent]
 })
-export class EventsModule { }
+export class Base64WebToolModule { }

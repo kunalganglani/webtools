@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventsComponent } from './events.component';
+import { Base64WebToolComponent } from './base64-web-tool.component';
 
-describe('EventsComponent', () => {
-  let component: EventsComponent;
-  let fixture: ComponentFixture<EventsComponent>;
+describe('Base64WebToolComponent', () => {
+  let component: Base64WebToolComponent;
+  let fixture: ComponentFixture<Base64WebToolComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventsComponent ]
+      declarations: [ Base64WebToolComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventsComponent);
+    fixture = TestBed.createComponent(Base64WebToolComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,8 @@
+.cardsContainer{
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+}
+.row div {
+    padding: 5px;
+  }

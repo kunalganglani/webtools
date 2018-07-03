@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'},
   {path: 'login', loadChildren: './login/login.module#LoginModule'},
   {path: 'register', loadChildren: './register/register.module#RegisterModule'},
-  {path: 'events', loadChildren: './events/events.module#EventsModule'},
+  {path: 'base64-encoding-decoding-web-tool', loadChildren: './base64-web-tool/base64-web-tool.module#Base64WebToolModule'},
   {path: 'members', loadChildren: './members/members.module#MembersModule'},
   {path: '**', redirectTo: 'dashboard'}
 ];

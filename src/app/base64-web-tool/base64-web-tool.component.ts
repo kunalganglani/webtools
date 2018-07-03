@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.css']
+  selector: 'app-base64-web-tool',
+  templateUrl: './base64-web-tool.component.html',
+  styleUrls: ['./base64-web-tool.component.css']
 })
-export class EventsComponent implements OnInit {
+export class Base64WebToolComponent implements OnInit {
 
   constructor() {
   }
