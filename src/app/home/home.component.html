@@ -158,4 +158,10 @@
     <app-footer-bar></app-footer-bar>
 
 </div> -->
-<p>home works</p>
+  
+<div class="row">
+    <div *ngFor="let card of cards" class="col-xs-6 col-sm-4 col-lg-2">
+        <app-home-nav-card  [cardInfo]="card"></app-home-nav-card>
+  </div>
+
+</div>

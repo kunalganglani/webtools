@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { MaterialModule} from '../shared/material.module';
 
 import { Routes, RouterModule } from '@angular/router';
+import { HomeNavCardComponent } from './home-nav-card/home-nav-card.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   {path: '**', redirectTo: ''},
@@ -15,7 +16,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomeComponent,
+  declarations: [HomeComponent, HomeNavCardComponent,
   ]
 })
 export class HomeModule { }
