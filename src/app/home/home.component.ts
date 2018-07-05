@@ -20,13 +20,13 @@ export class HomeComponent implements OnInit {
       iconUrl: iconsArray.base64,
       cardLabel: 'Base64 to Image Decoding',
       backgroundColor: 'lime',
-      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
+      navigateTo: '/base64-encoding-decoding/base64-to-image-decoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'CSS Optimization/ Minify',
       backgroundColor: 'rgb(0,181,255)',
-      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
+      navigateTo: '/css-web-tool/css-minify'
     },
     {
       iconUrl: iconsArray.base64,

@@ -1,8 +1,6 @@
 <p>
   Encode and Decode Base 64 string
 </p>
-<mat-tab-group  (selectedTabChange)="onTabClick($event)">
-  <mat-tab label="Encode Base 64">
     <header>
 
       <h1>Base64 Drag and Drop</h1>
@@ -29,13 +27,3 @@
       <li>JavaScript
         <strong>ENABLED</strong> (that's where the magic happens)</li>
     </ul>
-  </mat-tab>
-  <mat-tab label="Decode Base 64">
-    <mat-form-field class="example-full-width">
-      <textarea #base64Input matInput placeholder="Enter base 64 string to be converted to image"></textarea>
-    </mat-form-field>
-    <button mat-button (click)="decodeString(base64Input.value)">Decode to Image</button>
-    <div id="imageContainer"></div>
-  </mat-tab>
-
-</mat-tab-group>
