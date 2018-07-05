@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Base64WebToolComponent } from './base64-web-tool.component';
+import { ImageToBase64Component } from './image-to-base64.component';
 
-describe('Base64WebToolComponent', () => {
-  let component: Base64WebToolComponent;
-  let fixture: ComponentFixture<Base64WebToolComponent>;
+describe('ImageToBase64Component', () => {
+  let component: ImageToBase64Component;
+  let fixture: ComponentFixture<ImageToBase64Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Base64WebToolComponent ]
+      declarations: [ ImageToBase64Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Base64WebToolComponent);
+    fixture = TestBed.createComponent(ImageToBase64Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

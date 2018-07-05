@@ -3,6 +3,16 @@
     margin: auto;
     padding: 1em;
 }
+
+/* Distance between columns */
 .row div {
-    padding: 5px;
+    padding: 0px;
   }
+
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+  

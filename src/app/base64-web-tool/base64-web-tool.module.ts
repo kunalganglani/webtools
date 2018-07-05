@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Base64WebToolComponent } from './base64-web-tool.component';
+import { ImageToBase64Component } from './image-to-base64/image-to-base64.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
 
 const routes: Routes = [
-  { path: '', component: Base64WebToolComponent},
+  { path: '', component: ImageToBase64Component},
+  { path: 'image-to-base64-encoding', component: ImageToBase64Component},
+  { path: 'base64-to-image-decoding', component: ImageToBase64Component},
   {path: '**', redirectTo: ''}
 ];
 
@@ -15,6 +17,6 @@ const routes: Routes = [
     MaterialModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [Base64WebToolComponent]
+  declarations: [ImageToBase64Component]
 })
 export class Base64WebToolModule { }

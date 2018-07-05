@@ -13,122 +13,122 @@ export class HomeComponent implements OnInit {
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Image to Base64 Encoding',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'green',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Base64 to Image Decoding',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'lime',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'CSS Optimization/ Minify',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'rgb(0,181,255)',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'JS Minify',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'rgb(3,137,181)',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'if/else to Ternary',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'blue',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Check my IP',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'orange',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Password Generator',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'tomato',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'URL Encoding',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'rgb(169,125,133)',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'URL Decoding',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'rgb(222,144,156)',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'String Reverse',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'violet',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'String To Hex Convertor',
-      backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      backgroundColor: 'violet',
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Hex to String Convertor',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'String To Binary',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Binary To String',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Case Convertor',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'Word Count',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'RGB to HEX',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'HEX to RGB',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'URL to QR Code',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       iconUrl: iconsArray.base64,
       cardLabel: 'QR Code TO URL',
       backgroundColor: 'lightgreen',
-      navigateTo: '/base64-encoding-decoding-web-tool'
+      navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     }
   ];
   ngOnInit() {

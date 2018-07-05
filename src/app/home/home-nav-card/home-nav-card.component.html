@@ -14,7 +14,7 @@
     
   </div>
    -->
-   <div class="card" routerLink="{{cardInfo.navigateTo}}" routerLinkActive="active">
-      <img src="{{cardInfo.iconUrl}}" alt="Avatar" style="width:100%">
+   <div class="navCard"  [ngStyle]="{'background': cardInfo.backgroundColor }" routerLink="{{cardInfo.navigateTo}}" routerLinkActive="active">
+      <img src="{{cardInfo.iconUrl}}" alt="Avatar" class="iconStyle">
       <b>{{cardInfo.cardLabel}}</b>
    </div>
