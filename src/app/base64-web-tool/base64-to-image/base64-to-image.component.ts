@@ -18,15 +18,8 @@ export class Base64ToImageComponent implements OnInit {
     let src = 'data:image/jpeg;base64,';
     const item_image = base64Input;
     src += item_image;
-    // const newImage = document.querySelector('img');
-    // newImage.src = src;
     this.previewImage.nativeElement.src = src;
     this.downloadLink.nativeElement.href = src;
-    // newImage.width = newImage.height = 800;
-    document.querySelector('#imageContainer').innerHTML = newImage.outerHTML;
-    document.querySelector('#imageContainer').innerHTML = newImage.outerHTML;
-
+    this.previewImage.nativeElement.style.width = '100%';
   }
-
-
 }
