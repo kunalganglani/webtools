@@ -1,5 +1,14 @@
-<mat-form-field class="example-full-width">
-  <textarea #base64Input matInput placeholder="Enter base 64 string to be converted to image"></textarea>
-</mat-form-field>
-<button mat-button (click)="decodeString(base64Input.value)">Decode to Image</button>
-<div id="imageContainer"></div>
+
+<div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <textarea #base64Input matInput placeholder="Enter base 64 string to be converted to image"></textarea>
+      <br>
+      <button id="decodeButton" mat-button (click)="decodeString(base64Input.value)">Decode to Image</button>
+      <a #downloadLink class="downloadLinkStyle" download="FILENAME.png" >Download</a>  
+  </div>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div id="imageContainer">
+        <img #previewImage id="previewImage"/>
+      </div>
+  </div>
+</div>
