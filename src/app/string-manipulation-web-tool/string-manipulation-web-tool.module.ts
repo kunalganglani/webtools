@@ -7,11 +7,34 @@ import { StringToBinaryComponent } from './string-to-binary/string-to-binary.com
 import { BinaryToStringComponent } from './binary-to-string/binary-to-string.component';
 import { StringCaseConvertorComponent } from './string-case-convertor/string-case-convertor.component';
 import { WordCountComponent } from './word-count/word-count.component';
+import { Routes, RouterModule } from '@angular/router';
+import { MaterialModule } from '../shared/material.module';
+
+const routes: Routes = [
+  { path: '', component: StringReverveComponent},
+  { path: 'string-reverse', component: StringReverveComponent},
+  { path: 'string-to-hex', component: StringToHexComponent},
+  { path: 'hex-to-string', component: HexToStringComponent},
+  { path: 'string-to-binary', component: StringToBinaryComponent},
+  { path: 'binary-to-string', component: BinaryToStringComponent},
+  { path: 'case-convertor', component: StringCaseConvertorComponent},
+  { path: 'word-count', component: WordCountComponent},
+  {path: '**', redirectTo: ''}
+];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
+    RouterModule.forChild(routes)
   ],
-  declarations: [StringReverveComponent, StringToHexComponent, HexToStringComponent, StringToBinaryComponent, BinaryToStringComponent, StringCaseConvertorComponent, WordCountComponent]
+  declarations: [
+    StringReverveComponent,
+    StringToHexComponent,
+    HexToStringComponent,
+    StringToBinaryComponent,
+    BinaryToStringComponent,
+    StringCaseConvertorComponent,
+    WordCountComponent]
 })
 export class StringManipulationWebToolModule { }

@@ -18,6 +18,15 @@ const routes: Routes = [
   {path: 'login', loadChildren: './login/login.module#LoginModule'},
   {path: 'register', loadChildren: './register/register.module#RegisterModule'},
   {path: 'base64-encoding-decoding', loadChildren: './base64-web-tool/base64-web-tool.module#Base64WebToolModule'},
+  {path: 'check-my-ip', loadChildren: './check-my-ip/check-my-ip.module#CheckMyIpModule'},
+  {path: 'color-web-tool', loadChildren: './color-web-tool/color-web-tool.module#ColorWebToolModule'},
+  {path: 'css-web-tool', loadChildren: './css-web-tool/css-web-tool.module#CssWebToolModule'},
+  {path: 'javascript-web-tool', loadChildren: './javascript-web-tool/javascript-web-tool.module#JavascriptWebToolModule'},
+  {path: 'password-web-tool', loadChildren: './password-web-tool/password-web-tool.module#PasswordWebToolModule'},
+  {path: 'string-manipulation',
+  loadChildren: './string-manipulation-web-tool/string-manipulation-web-tool.module#StringManipulationWebToolModule'},
+  {path: 'url-web-tool', loadChildren: './url-web-tool/url-web-tool.module#UrlWebToolModule'},
+
   {path: 'members', loadChildren: './members/members.module#MembersModule'},
   {path: '**', redirectTo: 'dashboard'}
 ];

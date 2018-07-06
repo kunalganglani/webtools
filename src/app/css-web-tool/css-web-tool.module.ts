@@ -12,7 +12,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [CssMinifyComponent]
 })
