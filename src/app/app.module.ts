@@ -9,7 +9,7 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { MaterialModule } from './shared/material.module';
 
 import { UserService } from './user.service';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home'},
@@ -42,7 +42,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     AuthModule,
-    HttpModule,
+    HttpClientModule,
     MaterialModule,
     RouterModule.forRoot(routes),
   ],

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MembersComponent } from './members.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from '../auth/services/auth.gaurd';
 import { CoreModule } from '../shared/core/core.module';
 
@@ -34,7 +34,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     MaterialModule,
-    HttpModule,
+    HttpClientModule,
     CoreModule,
     RouterModule.forChild(routes)
   ],
