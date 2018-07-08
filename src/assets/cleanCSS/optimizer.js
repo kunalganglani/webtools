@@ -1,3 +1,4 @@
+function importScripts(...urls);
 var blobURL = URL.createObjectURL(new Blob(['(',
 
   function () {
@@ -8,7 +9,7 @@ var blobURL = URL.createObjectURL(new Blob(['(',
         case 'initialize':
           if (!initialized) {
             initialized = true
-            importScripts('//jakubpawlowicz.github.io/clean-css-builds/v4.1.11.js')
+            importScripts('https://jakubpawlowicz.github.io/clean-css-builds/v4.1.11.js')
           }
           break
         case 'optimize':

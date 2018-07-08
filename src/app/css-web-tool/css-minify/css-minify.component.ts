@@ -13,8 +13,8 @@ export class CssMinifyComponent implements OnInit, AfterViewInit {
   }
   loadScripts() {
     const dynamicScripts = [
-      'https://rawgit.com/kunalganglani/webtools/master/src/assets/cleanCSS/drag-drop.js',
       'https://rawgit.com/kunalganglani/webtools/master/src/assets/cleanCSS/optimizer.js',
+      'https://rawgit.com/kunalganglani/webtools/master/src/assets/cleanCSS/drag-drop.js',
       'https://rawgit.com/kunalganglani/webtools/master/src/assets/cleanCSS/settings.js'];
     for (let i = 0; i < dynamicScripts.length; i++) {
       const node = document.createElement('script');
