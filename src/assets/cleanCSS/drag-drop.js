@@ -97,7 +97,7 @@
 
     return parseInt((value / 1024.0) * factor) / factor
   }
-  if (document.readyState === 'complete') {
+  if (document.readyState === 'interactive') {
     console.log('document is already ready, just execute code here');
     myInitCode();
   } else {
