@@ -214,7 +214,19 @@
     }
   }
 
-  window.addEventListener('DOMContentLoaded', function () {
+  if (document.readyState === 'complete') {
+    console.log('document is already ready, just execute code here');
+    myInitCode();
+  } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('document was not ready, place code here');
+      myInitCode();
+    });
+  }
+
+  function myInitCode() {
+    // window.addEventListener('DOMContentLoaded', 
+    // function () {
     var settingsForm = document.querySelector('.js-settings')
     var level1Checkbox = settingsForm.querySelector('.js-settings-level-1')
     var level2Checkbox = settingsForm.querySelector('.js-settings-level-2')
@@ -231,5 +243,7 @@
 
     loadOptions(settingsForm)
     setOptionsFrom(settingsForm)()
-  })
+  }
+  //)
+  // }
 })()

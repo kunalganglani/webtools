@@ -97,8 +97,16 @@
 
     return parseInt((value / 1024.0) * factor) / factor
   }
-
-  window.addEventListener('DOMContentLoaded', function () {
+  if (document.readyState === 'complete') {
+    console.log('document is already ready, just execute code here');
+    myInitCode();
+  } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('document was not ready, place code here');
+      myInitCode();
+    });
+  }
+  function myInitCode(){
     var dragTarget = document.querySelector('.drag-target')
     var dropContainer = document.querySelector('.dropped-files')
 
@@ -106,6 +114,8 @@
     dragTarget.addEventListener('dragover', fileDraggedOver, false)
     dragTarget.addEventListener('drop', fileDropped(dropContainer), false)
 
-    Optimizer.oncomplete = optimizationCompleted
-  })
+    Optimizer.oncomplete = optimizationCompleted;
+  }
+  // window.addEventListener('DOMContentLoaded', function () {
+    // })
 })()
