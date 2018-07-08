@@ -1,35 +1,66 @@
-Optimizer = {
-  options: null, // see setOptionsFrom in settings.js
+var blobURL = URL.createObjectURL(new Blob(['(',
 
-  start: function () {
-    this.worker = new Worker('https://rawgit.com/kunalganglani/webtools/master/src/assets/cleanCSS/optimizer-worker.js')
-    this.worker.onmessage = function (event) {
+  function () {
+    var initialized = false
+
+    onmessage = function (event) {
       switch (event.data.command) {
-        case 'optimized':
-          Optimizer.oncomplete(event.data.id, event.data.output, event.data.saved)
+        case 'initialize':
+          if (!initialized) {
+            initialized = true
+            importScripts('//jakubpawlowicz.github.io/clean-css-builds/v4.1.11.js')
+          }
+          break
+        case 'optimize':
+          new CleanCSS(event.data.options).minify(event.data.input, function (error, output) {
+            postMessage({
+              command: 'optimized',
+              id: event.data.id,
+              error: error,
+              output: output,
+              saved: event.data.input.length - output.styles.length
+            })
+          })
       }
     }
-    this.worker.onerror = function (event) {
-      console.error(event)
-    }
-  },
 
-  initialize: function() {
-    this.worker.postMessage({
-      command: 'initialize'
-    })
-  },
 
-  process: function (id, styles) {
-    this.worker.postMessage({
-      command: 'optimize',
-      id: id,
-      input: styles,
-      options: this.options
-    })
-  },
+  }.toString(),
 
-  oncomplete: function () { /* noop */ }
-}
+  ')()'], { type: 'application/javascript' })),
+
+  Optimizer = {
+    options: null, // see setOptionsFrom in settings.js
+
+    start: function () {
+      this.worker = new Worker(blobURL)
+      this.worker.onmessage = function (event) {
+        switch (event.data.command) {
+          case 'optimized':
+            Optimizer.oncomplete(event.data.id, event.data.output, event.data.saved)
+        }
+      }
+      this.worker.onerror = function (event) {
+        console.error(event)
+      }
+    },
+
+    initialize: function () {
+      this.worker.postMessage({
+        command: 'initialize'
+      })
+    },
+
+    process: function (id, styles) {
+      this.worker.postMessage({
+        command: 'optimize',
+        id: id,
+        input: styles,
+        options: this.options
+      })
+    },
+
+    oncomplete: function () { /* noop */ }
+  }
 
 Optimizer.start()
