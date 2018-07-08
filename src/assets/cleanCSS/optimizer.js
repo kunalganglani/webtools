@@ -1,4 +1,3 @@
-function importScripts(...urls);
 var blobURL = URL.createObjectURL(new Blob(['(',
 
   function () {
