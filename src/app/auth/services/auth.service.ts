@@ -1,6 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable()
 export class AuthService {
@@ -10,7 +12,8 @@ export class AuthService {
   private _deleteUrl = 'http://localhost:3000/api/users';
 
   constructor(private http: HttpClient,
-    private _router: Router) { }
+    private _router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object) { }
 
   deleteUser(user) {
     return this.http.delete<any>(this._deleteUrl + '/' + user);
@@ -24,15 +27,21 @@ export class AuthService {
   }
 
   logoutUser() {
-    localStorage.removeItem('token');
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem('token');
+    }
     this._router.navigate(['/home']);
   }
 
   getToken() {
-    return localStorage.getItem('token');
+    if (isPlatformBrowser(this.platformId)) {
+      return localStorage.getItem('token');
+    }
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token');
+    if (isPlatformBrowser(this.platformId)) {
+      return !!localStorage.getItem('token');
+    }
   }
 }

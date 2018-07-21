@@ -10,6 +10,7 @@ import { MaterialModule } from './shared/material.module';
 
 import { UserService } from './user.service';
 import { HttpClientModule } from '@angular/common/http';
+import {TransferHttpCacheModule} from '@nguniversal/common';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home'},
@@ -39,11 +40,12 @@ const routes: Routes = [
     FooterBarComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'my-app'}),
     BrowserAnimationsModule,
     AuthModule,
     HttpClientModule,
     MaterialModule,
+    TransferHttpCacheModule,
     RouterModule.forRoot(routes),
   ],
   providers: [ UserService],

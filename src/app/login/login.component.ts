@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { AuthService } from '../auth/services/auth.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SpinnerService } from '../shared/spinner/spinner.service';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
     private _formBuilder: FormBuilder,
     public snackBar: MatSnackBar,
     private _auth: AuthService,
-    private _router: Router) {
+    private _router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object) {
   }
 
   ngOnInit() {
@@ -51,7 +53,9 @@ export class LoginComponent implements OnInit {
     this.spinnerService.show('mySpinner');
     if (this.form.get('email').value === 'admin@admin.com' && this.form.get('password').value === 'Welcome@123' ) {
       this.openSnackBar('Login Successful', 'OK');
-          localStorage.setItem('token', 'abc');
+      if (isPlatformBrowser(this.platformId)) {
+        localStorage.setItem('token', 'abc');
+      }
           this._router.navigate(['/dashboard']);
     } else {
       this._auth.loginUser(this.form.value)
@@ -59,7 +63,9 @@ export class LoginComponent implements OnInit {
         res => {
           this.openSnackBar('Login Successful', 'OK');
           this.spinnerService.hide('mySpinner');
-          localStorage.setItem('token', res.token);
+          if (isPlatformBrowser(this.platformId)) {
+            localStorage.setItem('token', res.token);
+          }
           this._router.navigate(['/dashboard']);
         },
         err => {

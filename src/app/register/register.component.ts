@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/services/auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +25,8 @@ export class RegisterComponent implements OnInit {
   };
   constructor(public snackBar: MatSnackBar, private formBuilder: FormBuilder,
     private _auth: AuthService,
-    private _router: Router) { }
+    private _router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -76,7 +78,9 @@ export class RegisterComponent implements OnInit {
       .subscribe(
         res => {
           this.openSnackBar('Registration Successful', 'OK');
-          localStorage.setItem('token', res.token);
+          if (isPlatformBrowser(this.platformId)) {
+            localStorage.setItem('token', res.token);
+          }
           this._router.navigate(['/members']);
         },
         err => {
