@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,14 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent {
   title = 'app';
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object) {
     this.router.events.subscribe(event => {
      if (event instanceof NavigationEnd) {
-       (<any>window).ga('set', 'page', event.urlAfterRedirects);
-       (<any>window).ga('send', 'pageview');
+      if (isPlatformBrowser(this.platformId)) {
+        (<any>window).ga('set', 'page', event.urlAfterRedirects);
+        (<any>window).ga('send', 'pageview');
+      }
      }
    });
  }
