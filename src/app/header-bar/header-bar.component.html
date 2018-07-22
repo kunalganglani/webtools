@@ -1,16 +1,34 @@
+<!--PEN CODE-->
+<input type="checkbox" id="xBxHack" />
+<nav id="mainNav" class="mainNav">
+	<div class="container">
+		<div class="logo"><a routerLink="/home">SmallWebTools</a></div>
+		<label class="navBars" for="xBxHack">
+            <mat-icon>menu</mat-icon>
+            <!-- <i class="fa fa-bars"></i> -->
+		</label>
+		<ul id="menu" class="menu">
+			<li><a routerLink="/home">Home</a></li>
+			<li><a routerLink="/home">About</a></li>
+			<li><a routerLink="/home">Contact</a></li>
+		</ul>
+	</div>
+</nav>
+<!--END PEN CODE-->
+<!-- 
 <header>
     <mat-toolbar color="primary">
         <span routerLink="/home">Small Web Tools</span>
-        <!-- <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
         <button mat-icon-button matTooltip="Menu" [matMenuTriggerFor]="appMenu">
             <mat-icon>menu</mat-icon>
-        </button> -->
+        </button>
     </mat-toolbar>
-    <!-- <mat-menu #appMenu>
+    <mat-menu #appMenu>
         <button mat-menu-item routerLink="/image-to-base64-encoding-web-tool" routerLinkActive="active"> Events </button>
         <button mat-menu-item routerLink="/members" routerLinkActive="active"> Members </button>
         <button mat-menu-item *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active"> Login </button>
         <button mat-menu-item *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active"> Register </button>
         <button mat-menu-item *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()"> Logout </button>
-    </mat-menu> -->
-</header>
+    </mat-menu>
+</header> -->
