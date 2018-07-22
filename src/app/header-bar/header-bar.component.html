@@ -1,21 +1,14 @@
-<!--PEN CODE-->
-<input type="checkbox" id="xBxHack" />
-<nav id="mainNav" class="mainNav">
-	<div class="container">
-		<div class="logo"><a routerLink="/home">SmallWebTools</a></div>
-		<label class="navBars" for="xBxHack">
-            <mat-icon>menu</mat-icon>
-            <!-- <i class="fa fa-bars"></i> -->
-		</label>
-		<ul id="menu" class="menu">
-			<li><a routerLink="/home">Home</a></li>
-			<li><a routerLink="/home">About</a></li>
-			<li><a routerLink="/home">Contact</a></li>
-		</ul>
-	</div>
-</nav>
-<!--END PEN CODE-->
-<!-- 
+
+<div class="topnav" #myTopnav>
+    <a routerLink="/home" class="active logo">SmallWebTools</a>
+    <a routerLink="/home">About</a>
+    <a routerLink="/home">Contact</a>
+    <a routerLink="/home">Blog</a>
+    <a href="javascript:void(0);" class="icon" (click)="myFunction()">
+        <mat-icon>menu</mat-icon>
+    </a>
+  </div>
+  <!-- 
 <header>
     <mat-toolbar color="primary">
         <span routerLink="/home">Small Web Tools</span>

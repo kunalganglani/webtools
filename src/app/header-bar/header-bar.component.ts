@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { AuthService } from '../auth/services/auth.service';
 
 @Component({
@@ -7,10 +7,19 @@ import { AuthService } from '../auth/services/auth.service';
   styleUrls: ['./header-bar.component.css']
 })
 export class HeaderBarComponent implements OnInit {
+  @ViewChild('myTopnav') myTopnav: ElementRef;
 
-  constructor(public _authService: AuthService) {}
-
+  constructor(public _authService: AuthService) { }
   ngOnInit() {
+  }
+
+  myFunction() {
+    const x = this.myTopnav.nativeElement;
+    if (x.className === 'topnav') {
+      x.className += ' responsive';
+    } else {
+      x.className = 'topnav';
+    }
   }
 
 }
