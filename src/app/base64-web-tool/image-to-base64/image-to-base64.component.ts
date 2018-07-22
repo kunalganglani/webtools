@@ -1,6 +1,7 @@
 import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material';
 import { isPlatformBrowser } from '@angular/common';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-image-to-base64',
@@ -9,7 +10,15 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class ImageToBase64Component implements OnInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(title: Title, meta: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object) {
+    title.setTitle('Imamge to Base 64 Encoding');
+
+    meta.addTags([
+      { name: 'author',   content: 'Smallwebtools.com'},
+      { name: 'keywords', content: 'base64, encoding, Image to base64, Comporess Images with base64, base 64, webapp optimization'},
+      { name: 'description', content: 'Upload Images and convert them to base64 strings to reduce your page load time' }
+    ]);
   }
   ngOnInit() {
     this.initializeConvertor();
