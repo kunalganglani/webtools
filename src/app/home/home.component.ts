@@ -14,14 +14,14 @@ export class HomeComponent implements OnInit {
       isVisible: true,
       iconUrl: iconsArray.base64,
       cardLabel: 'Image to Base64 Encoding',
-      backgroundColor: 'green',
+      backgroundColor: '#F23030',
       navigateTo: '/base64-encoding-decoding/image-to-base64-encoding'
     },
     {
       isVisible: true,
       iconUrl: iconsArray.base64,
       cardLabel: 'Base64 to Image Decoding',
-      backgroundColor: 'lime',
+      backgroundColor: '#ff4c23',
       navigateTo: '/base64-encoding-decoding/base64-to-image-decoding'
     },
     {

@@ -4,16 +4,31 @@
 .topnav a {
   float: left;
   display: block;
-  color: black;
+  color: #212121;
   text-align: center;
-  padding: 1em;
+  padding: 25px;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 18px;
   font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;
 }
-a.active.logo {
+.featureButton{
+  color: white;
   font-weight: bold;
-  padding-left: 0px;
+  background: tomato;
+  padding: 10px 14px;
+  position: relative;
+  top: -10px;
+  border: none;
+  border-radius: 5px;
+}
+a.active.logo {
+  font-family: 'Chela One', cursive;
+  padding: 12px 0px;
+  font-size: 2em;
+}
+.topnav a:not(:first-child) {
+float: right;
+font-size: 1em;
 }
 .topnav a:hover {
   color: black;
