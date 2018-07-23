@@ -11,7 +11,16 @@
   font-size: 18px;
   font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;
 }
-.featureButton{
+div.topnav a.featureTab{
+  padding-left: 1em;
+  padding-bottom: 0;
+
+}
+.tagLine{
+  font-size: 1.5em;
+  font-family: 'Rancho', cursive;
+}
+.featureTab button{
   color: white;
   font-weight: bold;
   background: tomato;
@@ -20,6 +29,10 @@
   top: -10px;
   border: none;
   border-radius: 5px;
+}
+.brandingContainer{
+  width: 13em;
+  display: inline-block;
 }
 a.active.logo {
   font-family: 'Chela One', cursive;

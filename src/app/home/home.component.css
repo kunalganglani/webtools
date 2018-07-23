@@ -7,7 +7,11 @@
     margin: auto;
     padding: 1em 0em 1em 0em;
 }
-
+@media screen and (max-width: 600px) {
+  .cardsContainer div{
+    width: 50%;
+  }
+}
 /* Distance between columns */
 .row div {
     padding: 0px;

@@ -1,14 +1,23 @@
-
 <div class="topnav" #myTopnav>
-    <a routerLink="/home" class="active logo">SmallWebTools</a>
-    <a routerLink="/home"><button class="featureButton">Desktop</button></a>
+    <div class="brandingContainer">
+    <div>
+        <a _ngcontent-c1="" class="active logo" routerlink="/home" ng-reflect-router-link="/home" href="/home">SmallWebTools</a>
+    </div>
+    <div class="tagLine">
+        Awesome Web Tools Bundle
+    </div>
+
+    </div>
+    <a routerLink="/home" class="featureTab">
+        <button class="featureButton">Desktop</button>
+    </a>
     <a routerLink="/home">About</a>
     <a routerLink="/home">Contact</a>
     <a href="javascript:void(0);" class="icon" (click)="toggleMenu()">
         <mat-icon>menu</mat-icon>
     </a>
-  </div>
-  <!-- 
+</div>
+<!-- 
 <header>
     <mat-toolbar color="primary">
         <span routerLink="/home">Small Web Tools</span>
