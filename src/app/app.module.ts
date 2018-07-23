@@ -11,6 +11,8 @@ import { MaterialModule } from './shared/material.module';
 import { UserService } from './user.service';
 import { HttpClientModule } from '@angular/common/http';
 import {TransferHttpCacheModule} from '@nguniversal/common';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home'},
@@ -47,6 +49,7 @@ const routes: Routes = [
     MaterialModule,
     TransferHttpCacheModule,
     RouterModule.forRoot(routes),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [ UserService],
   bootstrap: [AppComponent]
