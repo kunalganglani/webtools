@@ -4,6 +4,7 @@ import { JavascriptMinifyComponent } from './javascript-minify/javascript-minify
 import { IfElseTernaryComponent } from './if-else-ternary/if-else-ternary.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
+import { CoreModule } from '../shared/core/core.module';
 
 const routes: Routes = [
   { path: '', component: JavascriptMinifyComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    CoreModule,
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes)

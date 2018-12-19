@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RgbHexConvertorComponent } from './rgb-hex-convertor/rgb-hex-convertor.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
+import { CoreModule } from '../shared/core/core.module';
 
 const routes: Routes = [
   { path: '', component: RgbHexConvertorComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    CoreModule,
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes)

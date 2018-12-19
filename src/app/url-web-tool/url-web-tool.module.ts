@@ -6,6 +6,7 @@ import { UrlToQrCodeComponent } from './url-to-qr-code/url-to-qr-code.component'
 import { QrCodeToUrlComponent } from './qr-code-to-url/qr-code-to-url.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
+import { CoreModule } from '../shared/core/core.module';
 
 const routes: Routes = [
   { path: '', component: UrlToQrCodeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    CoreModule,
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes)
