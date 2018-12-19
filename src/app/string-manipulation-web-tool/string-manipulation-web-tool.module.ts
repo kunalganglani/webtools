@@ -9,6 +9,7 @@ import { StringCaseConvertorComponent } from './string-case-convertor/string-cas
 import { WordCountComponent } from './word-count/word-count.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../shared/material.module';
+import { CoreModule } from '../shared/core/core.module';
 
 const routes: Routes = [
   { path: '', component: StringReverveComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    CoreModule,
     MaterialModule,
     RouterModule.forChild(routes)
   ],

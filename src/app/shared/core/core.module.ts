@@ -5,16 +5,19 @@ import { MaterialModule } from '../material.module';
 import { SpinnerService } from '../spinner/spinner.service';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { ConfirmDialogService } from './services/confirm-dialog.service';
+import { UnderConstructionComponent } from './under-construction/under-construction.component';
+
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule
   ],
   exports: [
-    SpinnerComponent
+    SpinnerComponent,
+    UnderConstructionComponent
   ],
   providers: [ SpinnerService, ConfirmDialogService],
-  declarations: [SpinnerComponent, ConfirmDialogComponent],
+  declarations: [UnderConstructionComponent, SpinnerComponent, ConfirmDialogComponent],
   entryComponents: [ ConfirmDialogComponent ]
 })
 export class CoreModule { }
