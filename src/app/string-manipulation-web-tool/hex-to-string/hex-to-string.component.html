@@ -1,4 +1,12 @@
-<!-- <p>
-  hex-to-string works!
-</p> -->
-<app-under-construction></app-under-construction>
+<!-- <app-under-construction></app-under-construction> -->
+<div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <textarea #stringInput matInput (keyup)="hexToString(stringInput.value)" placeholder="Enter string input to be converted"></textarea>
+      <br>
+  </div>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div id="outputContainer">
+        <textarea readonly matInput innerText="{{outputStr}}"></textarea>
+      </div>
+  </div>
+</div>

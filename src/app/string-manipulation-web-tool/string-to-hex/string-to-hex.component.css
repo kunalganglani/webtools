@@ -1,0 +1,21 @@
+#decodeButton {
+    margin: auto;
+    display: block;
+}
+textarea {
+    height: 10em;
+    margin: 1em;
+    width: calc(100% - 2em);
+}
+.downloadLinkStyle {
+    display: block;
+    text-align: center;
+}
+
+.previewImageStyle {
+    width: 100%;
+}
+
+#outputContainer textarea {
+    background: lightgray;
+}
