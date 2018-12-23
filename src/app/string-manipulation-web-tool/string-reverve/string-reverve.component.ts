@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StringReverveComponent implements OnInit {
 
+  outputStr = '';
   constructor() { }
 
   ngOnInit() {
+  }
+  reverseString(strInput) {
+    this.outputStr = strInput.split('').reverse().join('');
   }
 
 }
